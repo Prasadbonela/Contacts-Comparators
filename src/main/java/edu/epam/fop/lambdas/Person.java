@@ -54,9 +54,9 @@ public final class Person {
       return false;
     var that = (Person) obj;
     return Objects.equals(this.name, that.name) &&
-        Objects.equals(this.surname, that.surname) &&
-        Objects.equals(this.birthdate, that.birthdate) &&
-        Objects.equals(this.address, that.address);
+            Objects.equals(this.surname, that.surname) &&
+            Objects.equals(this.birthdate, that.birthdate) &&
+            Objects.equals(this.address, that.address);
   }
 
   @Override
@@ -67,9 +67,25 @@ public final class Person {
   @Override
   public String toString() {
     return "Person[" +
-        "name=" + name + ", " +
-        "surname=" + surname + ", " +
-        "birthdate=" + birthdate + ", " +
-        "address=" + address + ']';
+            "name=" + name + ", " +
+            "surname=" + surname + ", " +
+            "birthdate=" + birthdate + ", " +
+            "address=" + address + ']';
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getSurname() {
+    return surname;
+  }
+
+  public LocalDate getBirthdate() {
+    return birthdate;
+  }
+
+  public Address getAddress() {
+    return address;
   }
 }

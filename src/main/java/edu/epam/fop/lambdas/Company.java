@@ -53,9 +53,9 @@ public final class Company {
       return false;
     var that = (Company) obj;
     return Objects.equals(this.name, that.name) &&
-        Objects.equals(this.registrationUuid, that.registrationUuid) &&
-        Objects.equals(this.director, that.director) &&
-        Objects.equals(this.officeAddress, that.officeAddress);
+            Objects.equals(this.registrationUuid, that.registrationUuid) &&
+            Objects.equals(this.director, that.director) &&
+            Objects.equals(this.officeAddress, that.officeAddress);
   }
 
   @Override
@@ -66,9 +66,25 @@ public final class Company {
   @Override
   public String toString() {
     return "Company[" +
-        "name=" + name + ", " +
-        "registrationId=" + registrationUuid + ", " +
-        "director=" + director + ", " +
-        "officeAddress=" + officeAddress + ']';
+            "name=" + name + ", " +
+            "registrationId=" + registrationUuid + ", " +
+            "director=" + director + ", " +
+            "officeAddress=" + officeAddress + ']';
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getRegistrationUuid() {
+    return registrationUuid;
+  }
+
+  public Person getDirector() {
+    return director;
+  }
+
+  public Address getOfficeAddress() {
+    return officeAddress;
   }
 }

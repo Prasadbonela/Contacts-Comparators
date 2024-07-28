@@ -7,7 +7,7 @@ public final class Address {
   private String country;
   private String city;
   private Integer zipCode;
-  private String street;
+  private  String street;
   private Integer building;
   private Integer apartment;
 
@@ -73,11 +73,11 @@ public final class Address {
       return false;
     var that = (Address) obj;
     return Objects.equals(this.country, that.country) &&
-        Objects.equals(this.city, that.city) &&
-        Objects.equals(this.zipCode, that.zipCode) &&
-        Objects.equals(this.street, that.street) &&
-        Objects.equals(this.building, that.building) &&
-        Objects.equals(this.apartment, that.apartment);
+            Objects.equals(this.city, that.city) &&
+            Objects.equals(this.zipCode, that.zipCode) &&
+            Objects.equals(street, street) &&
+            Objects.equals(this.building, that.building) &&
+            Objects.equals(this.apartment, that.apartment);
   }
 
   @Override
@@ -88,11 +88,35 @@ public final class Address {
   @Override
   public String toString() {
     return "Address[" +
-        "country=" + country + ", " +
-        "city=" + city + ", " +
-        "zipCode=" + zipCode + ", " +
-        "street=" + street + ", " +
-        "building=" + building + ", " +
-        "apartment=" + apartment + ']';
+            "country=" + country + ", " +
+            "city=" + city + ", " +
+            "zipCode=" + zipCode + ", " +
+            "street=" + street + ", " +
+            "building=" + building + ", " +
+            "apartment=" + apartment + ']';
+  }
+
+  public String getCountry() {
+    return country;
+  }
+
+  public String getCity() {
+    return city;
+  }
+
+  public Integer getZipCode() {
+    return zipCode;
+  }
+
+  public String getStreet() {
+    return street;
+  }
+
+  public Integer getBuilding() {
+    return building;
+  }
+
+  public Integer getApartment() {
+    return apartment;
   }
 }
